@@ -45,6 +45,9 @@ button {
   color: white;
   padding: 8px;
 }
+button:hover {
+  background: #666666;
+}
 #messageOne {
   font-weight: bold;
 }
