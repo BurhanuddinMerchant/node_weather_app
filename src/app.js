@@ -23,19 +23,19 @@ app.use(express.static(publicDirPath));
 app.get("", (req, res) => {
   res.render("index", {
     title: "Weather App",
-    name: "MYAPPS",
+    name: "BURZA",
   });
 });
 app.get("/about", (req, res) => {
   res.render("about", {
     title: "About",
-    name: "MYAPPS",
+    name: "BURZA",
   });
 });
 app.get("/help", (req, res) => {
   res.render("help", {
     title: "Help",
-    name: "MYAPPS",
+    name: "BURZA",
     helpText: "Help Meeeeeeee!!!",
   });
 });
@@ -71,14 +71,14 @@ app.get("/weather", (req, res) => {
 app.get("/help/*", (req, res) => {
   res.render("404", {
     title: "Error 404",
-    name: "MYAPPS",
+    name: "BURZA",
     error: "Help Article Not Found",
   });
 });
 app.get("*", (req, res) => {
   res.render("404", {
     title: "Error 404",
-    name: "MYAPPS",
+    name: "BURZA",
     error: "404 Page Not Found Error",
   });
 });
