@@ -13,10 +13,13 @@ const forecast = (lon, lat, callback) => {
     } else if (body.error) {
       callback(" Unable to find location!! ", undefined);
     } else {
+      console.log(body.daily.data[0]);
       callback(undefined, {
         temperature: body.currently.temperature,
         precipProb: body.currently.precipProbability,
         summary: body.currently.summary,
+        ozone: body.daily.data[0].ozone,
+        CloudCover: body.daily.data[0].cloudCover,
       });
     }
   });

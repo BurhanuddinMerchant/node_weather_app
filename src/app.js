@@ -52,7 +52,7 @@ app.get("/weather", (req, res) => {
     forecast(
       latitude,
       longitude,
-      (error, { temperature, precipProb, summary } = {}) => {
+      (error, { temperature, precipProb, summary, ozone, CloudCover } = {}) => {
         if (error) {
           return res.send({ error });
         }
@@ -61,6 +61,8 @@ app.get("/weather", (req, res) => {
           temperature,
           precipProb,
           address,
+          ozone,
+          CloudCover,
         });
       }
     );
